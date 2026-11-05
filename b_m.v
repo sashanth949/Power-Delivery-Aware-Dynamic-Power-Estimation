@@ -1,0 +1,44 @@
+module b_m(p,a,b,clk);
+output reg[7:0]p;
+input [3:0]a;
+input [3:0]b;
+input clk;
+wire[5:0]s;
+wire[10:0]c;
+wire[15:1]x;
+reg[3:0]a_r,b_r;
+wire[7:0]P_comb;
+always @(posedge clk)begin
+a_r<=a;
+b_r<=b;
+p <= P_comb;
+end
+assign P_comb[0]=a_r[0]&b_r[0];
+assign x[1]=a_r[1]&b_r[0];
+assign x[2]=a_r[0]&b_r[1];
+assign x[3]=a_r[2]&b_r[0];
+assign x[4]=a_r[1]&b_r[1];
+assign x[5]=a_r[0]&b_r[2];
+assign x[6]=a_r[3]&b_r[0];
+assign x[7]=a_r[2]&b_r[1];
+assign x[8]=a_r[1]&b_r[2];
+assign x[9]=a_r[0]&b_r[3];
+assign x[10]=a_r[3]&b_r[1];
+assign x[11]=a_r[2]&b_r[2];
+assign x[12]=a_r[1]&b_r[3];
+assign x[13]=a_r[3]&b_r[2];
+assign x[14]=a_r[2]&b_r[3];
+assign x[15]=a_r[3]&b_r[3];
+ha ha1(P_comb[1],c[0],x[1],x[2]);
+fa fa1(s[0],c[1],x[3],x[4],c[0]);
+ha ha2(P_comb[2],c[2],s[0],x[5]);
+fa fa2(s[1],c[3],x[6],x[7],c[1]);
+fa fa3(s[2],c[4],s[1],x[8],c[2]);
+ha ha3(P_comb[3],c[5],s[2],x[9]);
+ha ha4(s[3],c[6],c[3],x[10]);
+fa fa4(s[4],c[7],s[3],x[11],c[4]);
+fa fa5(P_comb[4],c[8],s[4],x[12],c[5]);
+fa fa6(s[5],c[9],x[13],c[6],c[7]);
+fa fa7(P_comb[5],c[10],s[5],x[14],c[8]);
+fa fa8(P_comb[6],P_comb[7],x[15],c[9],c[10]);
+endmodule
