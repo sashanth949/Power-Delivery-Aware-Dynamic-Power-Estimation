@@ -1,0 +1,61 @@
+LTspice 24.0.12 for Windows
+Circuit: * C:\Users\vnjot\AppData\Local\Programs\ADI\LTspice\Draft15.asc
+Start Time: Mon Oct 19 22:19:08 2026
+solver = Normal
+Maximum thread count: 16
+tnom = 27
+temp = 27
+method = modified trap
+Direct Newton iteration for .op point succeeded.
+
+
+Measurement "vout_avg" FAIL'ed
+
+Measurement "vout_pp" FAIL'ed
+
+Measurement "il_avg" FAIL'ed
+
+Measurement "il_ripple" FAIL'ed
+tsw=4e-06 FROM 0.0006 TO 0.000604
+fsw: 1/tsw=250000
+
+Measurement "vin_avg" FAIL'ed
+
+Measurement "iin_avg" FAIL'ed
+
+Measurement "pin_avg" FAIL'ed
+
+Measurement "pout_avg" FAIL'ed
+
+Measurement "ploss" FAIL'ed
+
+Measurement "efficiency" FAIL'ed
+
+Measurement "iout_avg" FAIL'ed
+
+Measurement "iout_pp" FAIL'ed
+
+Measurement "ic1_avg" FAIL'ed
+
+Measurement "ic1_rms" FAIL'ed
+
+Measurement "ic1_pp" FAIL'ed
+
+Measurement "pgate" FAIL'ed
+
+Measurement "pfet" FAIL'ed
+
+Measurement "pdiode" FAIL'ed
+
+Measurement "eff_total" FAIL'ed
+
+Measurement "pdcr" FAIL'ed
+
+Measurement "pesr" FAIL'ed
+tsw_fixed: 4e-06=4e-06
+fsw_fixed: 1/tsw_fixed=250000
+
+Measurement "ripple_pct" FAIL'ed
+
+Total elapsed time: 2.610 seconds.
+
